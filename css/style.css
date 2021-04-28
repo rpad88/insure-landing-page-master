@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+
+:root {
+  font-family: "DM Serif Display", serif;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+
+  /* Primary Colors */
+  --dark-violet: hsl(256, 26%, 20%);
+  --grayish-blue: hsl(216, 30%, 68%);
+
+  /* Neutral Colors */
+  --very-dark-violet: hsl(270, 9%, 17%);
+  --dark-grayish-violet: hsl(273, 4%, 51%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/***** <a> *****/
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--dark-grayish-violet);
+  padding: 0.2rem 0.5rem;
+}
+
+a:hover {
+  color: var(--dark-violet);
+}
+
+/****** Header ******/
+
+header {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+:is(header) .menu-options {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  height: 453px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  text-align: center;
+
+  background: url("../images/bg-pattern-mobile-nav.svg") no-repeat bottom;
+  background-color: var(--very-dark-violet);
+  visibility: hidden;
+}
+
+.menu-options.visible {
+  visibility: visible;
+}
+
+:is(.menu-options) a {
+  width: 80%;
+  margin: 0 auto;
+  color: var(--very-light-gray);
+  padding: 0.7rem 0;
+}
+:is(.menu-options) a:hover {
+  border: 1px solid var(--very-light-gray);
+}
+:is(.menu-options) a:first-child {
+  margin-top: 0.5rem;
+}
+
+:is(header) #close-img {
+  display: none;
+}
+
+/****** MAIN ******/
+
+main {
+  font-family: "Karla", sans-serif;
+  min-width: 375px;
+}
+
+:is(.jumbo) {
+  background-color: var(--dark-violet);
+}
+
+:is(.jumbo) .jumbo-img {
+  margin-bottom: -3px;
+}
+
+:is(.jumbo-img) img {
+  width: 100%;
+}
+
+:is(.jumbo) .jumbo-text {
+  padding: 4rem 1rem;
+  text-align: center;
+  color: var(--very-light-gray);
+  background: url("../images/bg-pattern-intro-left-mobile.svg") no-repeat top
+    left;
+}
+
+:is(.jumbo) .jumbo-text::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 400px;
+  width: 125px;
+  background: url("../images/bg-pattern-intro-right-mobile.svg") no-repeat;
+}
+
+:is(.jumbo-text) h1 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  text-align: center;
+}
+:is(.jumbo-text) p {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+:is(.jumbo-text) button {
+  color: var(--very-light-gray);
+  background-color: transparent;
+  border: 1px solid var(--very-light-gray);
+
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+:is(.jumbo-text) button:hover {
+  color: var(--dark-violet);
+  background-color: var(--very-light-gray);
+}
+
+/***** Qualities ******/
+
+:is(.qualities) {
+  text-align: center;
+  padding-top: 12rem;
+  position: relative;
+}
+
+:is(.qualities)::before {
+  content: "";
+  width: 110px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 10rem;
+  border-top: 0.2px solid rgba(190, 89, 190, 0.747);
+}
+
+:is(.qualities) h1 {
+  margin-bottom: 3rem;
+}
+
+/***** Cards *****/
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+:is(.card) {
+  text-align: center;
+  padding: 1rem 1.5rem;
+  /* background-color: wheat; */
+}
+
+:is(.card) .card-header {
+  margin-bottom: 1.2rem;
+}
+
+:is(.card) .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/***** How *****/
+
+.how {
+  width: 85%;
+  margin: 4rem auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  background: url("../images/bg-pattern-how-we-work-mobile.svg") no-repeat right;
+  background-color: var(--dark-violet);
+}
+
+:is(.how) h1 {
+  margin-bottom: 1.5rem;
+  color: var(--very-light-gray);
+}
+
+:is(.how) button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--very-light-gray);
+  color: var(--very-light-gray);
+  background-color: transparent;
+}
+
+/***** Social *****/
+.social {
+  text-align: center;
+  background: url("../images/bg-pattern-footer-mobile.svg") no-repeat left;
+  padding: 4rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+:is(.social) .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+:is(.social-icons) svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+:is(.social-icons) svg:hover,
+:is(.social-icons) path:hover {
+  fill: var(--dark-violet);
+}
+
+/***** Footer *****/
+
+hr {
+  width: 90%;
+  margin: 0 auto;
+  color: var(--dark-grayish-violet);
+}
+
+footer .links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+:is(.links) a {
+  display: block;
+}
+:is(.links) a:nth-child(1) {
+  margin: 1rem auto 1.5rem;
+}
+
+:is(.links) a ~ a {
+  color: var(--dark-violet);
+}
+
+:is(.links) a ~ a:hover {
+  text-decoration: underline;
+}
+
+/* ! */
+/* ! */
+/** Media Screen */
+@media (min-width: 600px) {
+  /***** <a> *****/
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--dark-grayish-violet);
+    padding: 0.2rem 0.5rem;
+  }
+
+  a:hover {
+    color: var(--dark-violet);
+  }
+
+  /***** Header *****/
+
+  :is(header) #hamburguer-img {
+    display: none;
+  }
+
+  :is(header) #close-img {
+    display: none;
+  }
+
+  :is(header) .menu {
+    display: none;
+  }
+
+  :is(header) .menu-options {
+    position: relative;
+    width: auto;
+    height: auto;
+    display: block;
+    top: 0;
+    gap: 0.8rem;
+
+    visibility: visible;
+    background: none;
+    background-color: none;
+  }
+
+  :is(.menu-options) a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--dark-grayish-violet);
+    background-color: none;
+    padding: 0.2rem 0.5rem;
+  }
+
+  :is(.menu-options) a:hover {
+    border: none;
+    color: var(--dark-violet);
+  }
+
+  :is(.menu-options) a:last-child {
+    color: var(--dark-violet);
+    border: 1px solid var(--dark-violet);
+  }
+
+  :is(.menu-options) a:last-child:hover {
+    color: var(--very-light-gray);
+    background-color: var(--dark-violet);
+  }
+
+  /***** MAIN *****/
+
+  .jumbo {
+    display: flex;
+    overflow: visible;
+    position: relative;
+  }
+
+  .jumbo-text {
+    width: 50%;
+  }
+
+  :is(.jumbo) .jumbo-text::after {
+    background: none;
+  }
+
+  .jumbo-img {
+    order: 2;
+    position: relative;
+    width: 400px;
+    max-width: 540px;
+    height: auto;
+    max-height: 650px;
+    margin-bottom: 0;
+
+    top: 5rem;
+
+    /* z-index: 2; */
+  }
+
+  .jumbo::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 360px;
+    width: 300px;
+    background: url("../images/bg-pattern-intro-right-desktop.svg") no-repeat
+      bottom;
+    background-size: cover;
+  }
+
+  :is(.jumbo) .jumbo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
