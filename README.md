@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub Solution](https://github.com/rpad88/insure-landing-page-master)
+- Live Site URL: [Live](https://rpad88.github.io/insure-landing-page-master/)
 
 ## My process
 
