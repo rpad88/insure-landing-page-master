@@ -152,7 +152,11 @@ main {
   position: relative;
 }
 
-:is(.qualities)::before {
+:is(.qualities) h1 {
+  margin-bottom: 3rem;
+}
+
+:is(.qualities) h1::before {
   content: "";
   width: 110px;
   position: absolute;
@@ -160,10 +164,6 @@ main {
   transform: translate(-50%);
   top: 10rem;
   border-top: 0.2px solid rgba(190, 89, 190, 0.747);
-}
-
-:is(.qualities) h1 {
-  margin-bottom: 3rem;
 }
 
 /***** Cards *****/
@@ -335,6 +335,10 @@ footer .links {
   }
 
   /***** MAIN *****/
+  .main {
+    width: 80%;
+    margin: 0 auto;
+  }
 
   .jumbo {
     display: flex;
@@ -364,6 +368,18 @@ footer .links {
     /* z-index: 2; */
   }
 
+  .jumbo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -290px;
+    height: 504px;
+    width: 195px;
+    background: url("../images/bg-pattern-intro-left-desktop.svg") no-repeat
+      left;
+    background-size: 50%;
+  }
+
   .jumbo::after {
     content: "";
     position: absolute;
@@ -381,5 +397,97 @@ footer .links {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: none;
+    padding-left: 4rem;
+    align-items: flex-start;
+  }
+
+  :is(.jumbo-text) h1 {
+    font-size: 2.5rem;
+    text-align: left;
+    padding-right: 5rem;
+  }
+
+  :is(.jumbo-text) h1::before {
+    content: "";
+    position: absolute;
+    /* top: 80px; */
+    margin-top: -2rem;
+    width: 110px;
+    border-top: 1px solid var(--dark-grayish-violet);
+  }
+
+  :is(.jumbo-text) p {
+    text-align: left;
+    font-weight: 400;
+  }
+
+  /***** Qualities *****/
+  :is(.qualities) h1::before {
+    content: "";
+    width: 110px;
+    position: absolute;
+    left: 3.49rem;
+    top: 10rem;
+    border-top: 0.2px solid rgba(190, 89, 190, 0.747);
+  }
+
+  .qualities {
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .cards-container {
+    flex-direction: row;
+    gap: 1rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .card {
+    padding: 0;
+  }
+
+  /***** How *****/
+  .how {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url("../images/bg-pattern-how-we-work-desktop.svg") no-repeat
+      right;
+    background-color: var(--very-dark-violet);
+    background-size: 40%;
+  }
+
+  :is(.how) h1 {
+    width: 60%;
+    margin-bottom: 0;
+  }
+
+  /***** Footer *****/
+  footer {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .social {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  hr {
+    width: 100%;
+  }
+
+  :is(footer) .links {
+    flex-direction: row;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  .company,
+  .help,
+  .contact,
+  .other {
+    width: fit-content;
   }
 }
