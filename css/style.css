@@ -228,15 +228,41 @@ main {
   gap: 1rem;
 }
 
-:is(.social-icons) svg {
+:is(.social-icons) div {
   display: block;
   width: 24px;
   height: 24px;
   cursor: pointer;
+  background-color: var(--dark-grayish-violet);
 }
-:is(.social-icons) svg:hover,
+
+/* :is(.social-icons) svg:hover,
 :is(.social-icons) path:hover {
   fill: var(--dark-violet);
+} */
+
+.facebook {
+  mask: url(../images/icon-facebook.svg);
+  -webkit-mask: url(../images/icon-facebook.svg);
+}
+.twitter {
+  mask: url(../images/icon-twitter.svg);
+  -webkit-mask: url(../images/icon-twitter.svg);
+}
+
+.pinterest {
+  mask: url(../images/icon-pinterest.svg);
+  -webkit-mask: url(../images/icon-pinterest.svg);
+}
+
+.instagram {
+  mask: url(../images/icon-instagram.svg);
+  -webkit-mask: url(../images/icon-instagram.svg);
+}
+
+:is(.social-icons) div:hover,
+:is(.social-icons) div:focus {
+  background-color: var(--dark-violet);
 }
 
 /***** Footer *****/
